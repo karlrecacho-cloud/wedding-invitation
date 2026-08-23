@@ -906,64 +906,77 @@ a {
 }
 
 /* ==========================================
-   ELEGANT DRESS CODE SECTION
+   3-COLUMN DRESS CODE SECTION
    ========================================== */
 
 .dresscode-section {
-    background-color: #FAF8F5;
+    background-color: #FAF8F5; /* Warm Ivory Page Background */
     padding: 80px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.dresscode-container {
+.dresscode-card {
     background-color: #FFFDF9;
     width: 100%;
-    max-width: 680px;
-    padding: 60px 40px;
-    border: 1px solid #E8E2D9;
+    max-width: 960px;
+    padding: 50px 30px;
+    border: 1px solid #E8E2D9; /* Thin subtle beige border */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Side Illustration Columns */
+.fashion-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fashion-illustration {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    opacity: 0.8;
+}
+
+/* Center Content Column */
+.dresscode-content-col {
+    flex: 2;
     text-align: center;
 }
 
 .dresscode-title {
     font-family: 'Cinzel', serif;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: 400;
-    color: #2D3A47;
+    color: #2D3A47; /* Dark Charcoal */
     letter-spacing: 0.15em;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-transform: uppercase;
 }
 
-/* Illustration styling */
-.dresscode-illustration {
-    margin: 0 auto 30px auto;
-    opacity: 0.85;
-    display: flex;
-    justify-content: center;
-}
-
-.dresscode-roles {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-bottom: 40px;
+.role-group {
+    margin-bottom: 20px;
 }
 
 .role-heading, .palette-heading {
     font-family: 'Cinzel', serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: #B49A67;
+    color: #B49A67; /* Muted Gold Accent */
     letter-spacing: 0.25em;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-transform: uppercase;
 }
 
 .role-detail {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: #4A4A4A;
     margin: 4px 0;
 }
@@ -973,22 +986,16 @@ a {
     color: #2D3A47;
 }
 
-.divider-line {
-    width: 35px;
-    height: 1px;
-    background-color: #E8E2D9;
-    margin: 0 auto;
-}
-
+/* Color Palette Swatches */
 .palette-wrapper {
-    margin: 35px 0 30px 0;
+    margin: 30px 0 25px 0;
 }
 
 .swatches-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
-    margin-top: 20px;
+    gap: 8px;
+    margin-top: 15px;
 }
 
 .swatch-item {
@@ -998,38 +1005,44 @@ a {
 }
 
 .swatch {
-    width: 32px;
-    height: 32px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
-    margin-bottom: 8px;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+    margin-bottom: 6px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .swatch-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 0.85rem;
-    color: #555555;
+    font-size: 0.75rem;
+    color: #666666;
 }
 
+/* Flexibility Note */
 .flexibility-note {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-style: italic;
     color: #5A554E;
     line-height: 1.6;
-    max-width: 540px;
-    margin: 0 auto;
     border-top: 1px solid #E8E2D9;
-    padding-top: 25px;
+    padding-top: 20px;
+    margin-top: 20px;
 }
 
-@media (max-width: 600px) {
-    .dresscode-container {
+/* Responsive Mobile view: Stacks illustrations and text gracefully */
+@media (max-width: 768px) {
+    .dresscode-card {
+        flex-direction: column;
         padding: 40px 20px;
+    }
+
+    .fashion-col {
+        display: none; /* Hides side illustrations on small screens to preserve elegance */
     }
 
     .swatches-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px 10px;
+        gap: 15px 5px;
     }
 }
