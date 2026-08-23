@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnly & Kaycee — Wedding Invitation</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- OPENING INVITATION COVER -->
+    <div id="opening-screen" class="opening-screen">
+        <div class="opening-card">
+            <p class="subtitle">Together with their families</p>
+            <h1 class="main-names">Johnly <span class="ampersand">&</span> Kaycee</h1>
+            <p class="invite-text">invite you to celebrate their wedding</p>
+            <p class="date-text">December 5, 2026</p>
+            
+            <button id="open-invitation-btn" class="btn btn-primary btn-open">
+                OPEN INVITATION
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN WEBSITE CONTENT -->
+    <div id="main-content" class="main-content">
+        
+        <!-- NAVIGATION -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#hero" class="nav-brand">J & K</a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link">HOME</a></li>
+                    <li><a href="#story" class="nav-link">OUR STORY</a></li>
+                    <li><a href="#wedding" class="nav-link">WEDDING</a></li>
+                    <li><a href="#gallery" class="nav-link">GALLERY</a></li>
+                    <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- FLOATING MUSIC PLAYER -->
+        <div class="music-player">
+            <button id="music-toggle" class="music-btn" aria-label="Toggle Music">
+                <span class="music-icon">🎵</span>
+            </button>
+            <audio id="bg-music" loop>
+                <source src="music/wedding-song.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Johnly & Kaycee</h1>
+                <p class="hero-date">December 5, 2026</p>
+                
+                <div class="hero-image-wrapper">
+                    <img src="images/couple.jpg" alt="Johnly & Kaycee" class="hero-image" onerror="this.src='https://via.placeholder.com/1000x1333/F7F3EC/8C7A6B?text=Johnly+%26+Kaycee'">
+                </div>
+
+                <p class="hero-tagline">Our Forever Begins</p>
+                <a href="#story" class="scroll-indicator" aria-label="Scroll down">
+                    <span class="scroll-arrow">↓</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- OUR STORY -->
+        <section id="story" class="section story-section">
+            <div class="container">
+                <h2 class="section-title">Our Story</h2>
+                <div class="decorative-divider">❖</div>
+
+                <div class="story-grid">
+                    <div class="story-card">
+                        <h3>How We Met</h3>
+                        <p class="placeholder-text">[EDITABLE PLACEHOLDER: Share how Johnly and Kaycee first met, initial impressions, and the story of how your journey together began.]</p>
+                    </div>
+
+                    <div class="story-card">
+                        <h3>Our Journey</h3>
+                        <p class="placeholder-text">[EDITABLE PLACEHOLDER: Describe your favorite shared memories, life milestones, adventures, and growth together as a couple.]</p>
+                    </div>
+
+                    <div class="story-card">
+                        <h3>The Proposal</h3>
+                        <p class="placeholder-text">[EDITABLE PLACEHOLDER: Tell the story of the proposal—the setting, the special moment, and the unforgettable 'Yes!']</p>
+                    </div>
+
+                    <div class="story-card">
+                        <h3>Forever Begins</h3>
+                        <p class="placeholder-text">[EDITABLE PLACEHOLDER: A sweet note on starting this new chapter of marriage and welcoming family and friends to celebrate.]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COUNTDOWN -->
+        <section class="section countdown-section">
+            <div class="container">
+                <h2 class="section-title">Counting Down to Forever</h2>
+                <div class="countdown-container" id="countdown">
+                    <div class="countdown-box">
+                        <span class="number" id="cd-days">00</span>
+                        <span class="label">DAYS</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="number" id="cd-hours">00</span>
+                        <span class="label">HOURS</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="number" id="cd-minutes">00</span>
+                        <span class="label">MINUTES</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="number" id="cd-seconds">00</span>
+                        <span class="label">SECONDS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE WEDDING DAY -->
+        <section id="wedding" class="section wedding-section">
+            <div class="container">
+                <h2 class="section-title">The Wedding Day</h2>
+                <div class="decorative-divider">❖</div>
+
+                <div class="venue-cards">
+                    <!-- CEREMONY CARD -->
+                    <div class="venue-card">
+                        <h3 class="venue-type">CEREMONY</h3>
+                        <p class="venue-date">December 5, 2026</p>
+                        <p class="venue-time">3:30 PM</p>
+                        <p class="venue-name">Our Lady of the Sacred Heart Parish Church</p>
+                        <button class="btn btn-outline map-btn" data-type="ceremony">
+                            VIEW CEREMONY LOCATION
+                        </button>
+                    </div>
+
+                    <!-- RECEPTION CARD -->
+                    <div class="venue-card">
+                        <h3 class="venue-type">RECEPTION</h3>
+                        <p class="venue-date">December 5, 2026</p>
+                        <p class="venue-time">Reception time: <span class="placeholder-inline">[RECEPTION TIME TO BE ADDED]</span></p>
+                        <p class="venue-name">The Bellevue Manila</p>
+                        <button class="btn btn-outline map-btn" data-type="reception">
+                            VIEW RECEPTION LOCATION
+                        </button>
+                    </div>
+                </div>
+
+                <!-- WEDDING PROGRAM -->
+                <div class="program-wrapper">
+                    <h3 class="subsection-title">Program Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">3:30 PM</div>
+                            <div class="timeline-content">Wedding Ceremony</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">[TIME]</div>
+                            <div class="timeline-content">Cocktail Hour</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">[TIME]</div>
+                            <div class="timeline-content">Reception</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">[TIME]</div>
+                            <div class="timeline-content">Dinner</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">[TIME]</div>
+                            <div class="timeline-content">Speeches & Toasts</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">[TIME]</div>
+                            <div class="timeline-content">First Dance</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-time">[TIME]</div>
+                            <div class="timeline-content">Celebration</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DRESS CODE -->
+                <div class="dress-code-wrapper">
+                    <h3 class="subsection-title">Dress Code</h3>
+                    <p class="dress-code-status">[DRESS CODE TO BE ADDED]</p>
+                    <p class="dress-code-note">We invite our guests to celebrate with us in elegant attire.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHOTO GALLERY -->
+        <section id="gallery" class="section gallery-section">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                <div class="decorative-divider">❖</div>
+
+                <div class="gallery-grid" id="gallery-grid">
+                    <div class="gallery-item hero-item" data-index="0">
+                        <img src="images/couple.jpg" alt="Johnly & Kaycee Photo" onerror="this.src='https://via.placeholder.com/800x1000/F7F3EC/8C7A6B?text=Hero+Photo'">
+                    </div>
+                    <div class="gallery-item" data-index="1">
+                        <img src="images/photo1.jpg" alt="Gallery Photo 1" onerror="this.src='https://via.placeholder.com/600x800/F7F3EC/8C7A6B?text=Photo+1'">
+                    </div>
+                    <div class="gallery-item" data-index="2">
+                        <img src="images/photo2.jpg" alt="Gallery Photo 2" onerror="this.src='https://via.placeholder.com/600x800/F7F3EC/8C7A6B?text=Photo+2'">
+                    </div>
+                    <div class="gallery-item" data-index="3">
+                        <img src="images/photo3.jpg" alt="Gallery Photo 3" onerror="this.src='https://via.placeholder.com/600x800/F7F3EC/8C7A6B?text=Photo+3'">
+                    </div>
+                    <div class="gallery-item" data-index="4">
+                        <img src="images/photo4.jpg" alt="Gallery Photo 4" onerror="this.src='https://via.placeholder.com/600x800/F7F3EC/8C7A6B?text=Photo+4'">
+                    </div>
+                    <div class="gallery-item" data-index="5">
+                        <img src="images/photo5.jpg" alt="Gallery Photo 5" onerror="this.src='https://via.placeholder.com/600x800/F7F3EC/8C7A6B?text=Photo+5'">
+                    </div>
+                    <div class="gallery-item" data-index="6">
+                        <img src="images/photo6.jpg" alt="Gallery Photo 6" onerror="this.src='https://via.placeholder.com/600x800/F7F3EC/8C7A6B?text=Photo+6'">
+                    </div>
+                    <div class="gallery-item" data-index="7">
+                        <img src="images/photo7.jpg" alt="Gallery Photo 7" onerror="this.src='https://via.placeholder.com/600x800/F7F3EC/8C7A6B?text=Photo+7'">
+                    </div>
+                    <div class="gallery-item" data-index="8">
+                        <img src="images/photo8.jpg" alt="Gallery Photo 8" onerror="this.src='https://via.placeholder.com/600x800/F7F3EC/8C7A6B?text=Photo+8'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous Image">&#10094;</button>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Gallery Lightbox View">
+            </div>
+            <button class="lightbox-next" id="lightbox-next" aria-label="Next Image">&#10095;</button>
+        </div>
+
+        <!-- RSVP -->
+        <section id="rsvp" class="section rsvp-section">
+            <div class="container">
+                <h2 class="section-title">Will You Join Us?</h2>
+                <p class="rsvp-subtext">We would be honored to celebrate this special day with you.</p>
+                <div class="decorative-divider">❖</div>
+
+                <div class="rsvp-card">
+                    <form id="rsvp-form" class="rsvp-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="e.g., Jane Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="e.g., jane@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number *</label>
+                            <input type="tel" id="mobile" name="mobile" required placeholder="e.g., +63 912 345 6789">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Will you be joining us? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="attendance" value="Joyfully Accept" required>
+                                    <span>Joyfully Accept</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="attendance" value="Regretfully Decline" required>
+                                    <span>Regretfully Decline</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- CONDITIONAL ACCEPTANCE FIELDS -->
+                        <div id="conditional-rsvp" class="conditional-rsvp hidden">
+                            <div class="form-group">
+                                <label for="numGuests">Number of Guests</label>
+                                <input type="number" id="numGuests" name="numGuests" min="1" max="10" value="1">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guestNames">Guest Names</label>
+                                <textarea id="guestNames" name="guestNames" rows="2" placeholder="List additional guest names..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mealPreference">Meal Preference</label>
+                                <input type="text" id="mealPreference" name="mealPreference" placeholder="e.g., Standard, Vegetarian, Seafood">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dietary">Dietary Restrictions / Allergies</label>
+                                <input type="text" id="dietary" name="dietary" placeholder="e.g., Peanut allergy, Lactose intolerant">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message for Johnly & Kaycee</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Leave a warm note for the couple..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">SEND RSVP</button>
+                    </form>
+
+                    <!-- RSVP FEEDBACK -->
+                    <div id="rsvp-status" class="rsvp-status hidden">
+                        <div class="spinner" id="rsvp-spinner"></div>
+                        <div id="rsvp-response-message" class="rsvp-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="decorative-divider">❖</div>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>What time should we arrive?</span>
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>[Editable answer: We recommend arriving 30 minutes prior to the 3:30 PM ceremony start time so everyone can be seated comfortably.]</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>What should we wear?</span>
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>[Editable answer: Please refer to the Dress Code section. Formal / Elegant attire is requested.]</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Can I bring a plus-one?</span>
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>[Editable answer: Due to venue capacity limits, we can only accommodate guests specifically listed on the invitation or RSVP form.]</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Are children invited?</span>
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>[Editable answer: While we love your little ones, our celebration will be an adults-only event with the exception of immediate family.]</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Is parking available?</span>
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>[Editable answer: Yes, designated parking is available at both Our Lady of the Sacred Heart Parish Church and The Bellevue Manila.]</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>When is the RSVP deadline?</span>
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>[Editable answer: Kindly send your RSVP on or before [RSVP DEADLINE TO BE ADDED].]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GIFT / REGISTRY -->
+        <section class="section registry-section">
+            <div class="container">
+                <h2 class="section-title">Your Presence Is Our Greatest Gift</h2>
+                <p class="registry-subtext">Having you celebrate with us is already the greatest gift. For those who wish to bless us further, we've prepared the following options.</p>
+                <div class="decorative-divider">❖</div>
+
+                <div class="registry-grid">
+                    <div class="registry-card">
+                        <h3>GCash</h3>
+                        <p class="placeholder-text">[GCASH DETAILS]</p>
+                    </div>
+                    <div class="registry-card">
+                        <h3>Bank Transfer</h3>
+                        <p class="placeholder-text">[BANK DETAILS]</p>
+                    </div>
+                    <div class="registry-card">
+                        <h3>Gift Registry</h3>
+                        <p class="placeholder-text">[REGISTRY LINK]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL MESSAGE & FOOTER -->
+        <footer class="final-footer">
+            <div class="container">
+                <h2 class="final-heading">We can't wait to celebrate with you.</h2>
+                <p class="final-names">Johnly & Kaycee</p>
+                <p class="final-date">December 5, 2026</p>
+                <div class="decorative-divider">❖</div>
+                <p class="made-with">Made with love ♡</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
