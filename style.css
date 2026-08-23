@@ -906,30 +906,31 @@ a {
 }
 
 /* ==========================================
-   3-COLUMN DRESS CODE SECTION
+   MATCHING DRESS CODE SECTION
    ========================================== */
 
 .dresscode-section {
-    background-color: #FAF8F5; /* Warm Ivory Page Background */
+    background-color: #FFFFFF; /* Main page background */
     padding: 80px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Card matching the exact tone of your Reception container */
 .dresscode-card {
-    background-color: #FFFDF9;
+    background-color: #F7F3EC; /* Exact warm beige background */
     width: 100%;
     max-width: 960px;
     padding: 50px 30px;
-    border: 1px solid #E8E2D9; /* Thin subtle beige border */
+    border: 1px solid #C3A366; /* Muted Gold Border */
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
 
-/* Side Illustration Columns */
+/* PNG Illustration Columns */
 .fashion-col {
     flex: 1;
     display: flex;
@@ -937,14 +938,15 @@ a {
     align-items: center;
 }
 
-.fashion-illustration {
+.fashion-img {
     width: 100%;
-    max-width: 140px;
+    max-width: 160px;
     height: auto;
-    opacity: 0.8;
+    object-fit: contain;
+    mix-blend-mode: multiply; /* Blends white PNG backgrounds seamlessly into #F7F3EC */
 }
 
-/* Center Content Column */
+/* Center Column Typography & Spacing */
 .dresscode-content-col {
     flex: 2;
     text-align: center;
@@ -954,8 +956,8 @@ a {
     font-family: 'Cinzel', serif;
     font-size: 2.2rem;
     font-weight: 400;
-    color: #2D3A47; /* Dark Charcoal */
-    letter-spacing: 0.15em;
+    color: #C3A366; /* Gold Header Color */
+    letter-spacing: 0.18em;
     margin-bottom: 25px;
     text-transform: uppercase;
 }
@@ -968,7 +970,7 @@ a {
     font-family: 'Cinzel', serif;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #B49A67; /* Muted Gold Accent */
+    color: #2D3A47; /* Dark Charcoal for contrast */
     letter-spacing: 0.25em;
     margin-bottom: 8px;
     text-transform: uppercase;
@@ -977,7 +979,7 @@ a {
 .role-detail {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
-    color: #4A4A4A;
+    color: #333333;
     margin: 4px 0;
 }
 
@@ -986,7 +988,7 @@ a {
     color: #2D3A47;
 }
 
-/* Color Palette Swatches */
+/* Color Swatches Grid */
 .palette-wrapper {
     margin: 30px 0 25px 0;
 }
@@ -1015,7 +1017,7 @@ a {
 .swatch-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: 0.75rem;
-    color: #666666;
+    color: #555555;
 }
 
 /* Flexibility Note */
@@ -1025,12 +1027,12 @@ a {
     font-style: italic;
     color: #5A554E;
     line-height: 1.6;
-    border-top: 1px solid #E8E2D9;
+    border-top: 1px solid #DCD5C9;
     padding-top: 20px;
     margin-top: 20px;
 }
 
-/* Responsive Mobile view: Stacks illustrations and text gracefully */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .dresscode-card {
         flex-direction: column;
@@ -1038,7 +1040,7 @@ a {
     }
 
     .fashion-col {
-        display: none; /* Hides side illustrations on small screens to preserve elegance */
+        display: none; /* Hides images on mobile to maintain vertical spacing */
     }
 
     .swatches-grid {
