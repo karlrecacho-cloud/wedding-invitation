@@ -905,146 +905,164 @@ a {
     }
 }
 
-/* ==========================================
-   MATCHING DRESS CODE SECTION
-   ========================================== */
+/* Import serif typography for luxury invitation aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
 
+/* Section Container */
 .dresscode-section {
-    background-color: #FFFFFF; /* Main page background */
-    padding: 80px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #FFFFFF;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Card matching the exact tone of your Reception container */
+/* Central Card */
 .dresscode-card {
-    background-color: #F7F3EC; /* Exact warm beige background */
-    width: 100%;
-    max-width: 960px;
-    padding: 50px 30px;
-    border: 1px solid #C3A366; /* Muted Gold Border */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  background-color: #F7F3EC;
+  width: 100%;
+  max-width: 980px;
+  padding: 55px 40px;
+  border: 1px solid #C3A366;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
-/* PNG Illustration Columns */
-.fashion-col {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Illustration Columns */
+.illustration-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.fashion-img {
-    width: 100%;
-    max-width: 160px;
-    height: auto;
-    object-fit: contain;
-    mix-blend-mode: multiply; /* Blends white PNG backgrounds seamlessly into #F7F3EC */
+.illustration-img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
-/* Center Column Typography & Spacing */
+/* Middle Content Column */
 .dresscode-content-col {
-    flex: 2;
-    text-align: center;
+  flex: 2;
+  text-align: center;
 }
 
 .dresscode-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2.2rem;
-    font-weight: 400;
-    color: #C3A366; /* Gold Header Color */
-    letter-spacing: 0.18em;
-    margin-bottom: 25px;
-    text-transform: uppercase;
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #C3A366;
+  letter-spacing: 0.2em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.dresscode-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2D3A47;
+  letter-spacing: 0.15em;
+  margin: 6px 0 28px 0;
+  font-variant: small-caps;
 }
 
 .role-group {
-    margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
-.role-heading, .palette-heading {
-    font-family: 'Cinzel', serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #2D3A47; /* Dark Charcoal for contrast */
-    letter-spacing: 0.25em;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+.role-heading, 
+.palette-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #C3A366;
+  letter-spacing: 0.25em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .role-detail {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: #333333;
-    margin: 4px 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: #333333;
+  margin: 4px 0;
 }
 
 .role-detail span {
-    font-weight: 600;
-    color: #2D3A47;
+  font-weight: 600;
+  color: #2D3A47;
 }
 
 /* Color Swatches Grid */
 .palette-wrapper {
-    margin: 30px 0 25px 0;
+  margin: 28px 0;
 }
 
 .swatches-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 8px;
-    margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
 }
 
 .swatch-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .swatch {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    margin-bottom: 6px;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-bottom: 6px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .swatch-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.75rem;
-    color: #555555;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.8rem;
+  color: #555555;
 }
 
-/* Flexibility Note */
+.divider-line {
+  width: 80%;
+  height: 1px;
+  background-color: #DCD5C9;
+  margin: 24px auto 20px auto;
+}
+
 .flexibility-note {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 0.95rem;
-    font-style: italic;
-    color: #5A554E;
-    line-height: 1.6;
-    border-top: 1px solid #DCD5C9;
-    padding-top: 20px;
-    margin-top: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.98rem;
+  font-style: italic;
+  color: #5A554E;
+  line-height: 1.65;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-/* Mobile Responsiveness */
+/* Responsive Mobile Rules */
 @media (max-width: 768px) {
-    .dresscode-card {
-        flex-direction: column;
-        padding: 40px 20px;
-    }
+  .dresscode-card {
+    flex-direction: column;
+    padding: 40px 24px;
+  }
 
-    .fashion-col {
-        display: none; /* Hides images on mobile to maintain vertical spacing */
-    }
+  .illustration-col {
+    display: none;
+  }
 
-    .swatches-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px 5px;
-    }
+  .swatches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 8px;
+  }
 }
